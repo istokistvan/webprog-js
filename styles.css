@@ -1,0 +1,107 @@
+body {
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+#game {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+h1,
+#player,
+#last-games,
+#paused,
+#selector {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+#last-games table tr,
+#last-games table td {
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+  width: 15vw;
+  height: 5vh;
+}
+
+#timer,
+#player {
+  font-weight: bold;
+}
+
+#options {
+  display: flex;
+  justify-content: center;
+  height: 25vh;
+}
+
+.card {
+  border: 2px solid black;
+  border-radius: 10%;
+  margin: 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 10vw;
+  height: 15vh;
+  cursor: pointer;
+}
+
+.card span {
+  display: none;
+}
+
+.card:hover {
+  font-weight: bold;
+  width: 15vw;
+  height: 20vh;
+  transition: all 0.5s;
+}
+
+.card:hover span {
+  display: initial;
+  margin-top: 1vh;
+}
+
+#board tr,
+#board td {
+  height: 7vh;
+  width: 4vw;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.black {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+  pointer-events: none;
+}
+
+.lighted {
+  background-color: yellow;
+  transition: all 0.5s;
+}
+
+.clicked {
+  background-color: yellow;
+}
+
+.correct {
+  color: green;
+}
+
+td.clicked.lighted {
+  background-color: red;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Felvillanyozódás</title>
+</head>
+
+<body>
+    <h1>Rövid leírás</h1>
+    <ul>
+        <li>
+            A királynak négyzet alapú szobái vannak, amelyek fekete és fehér
+            cellákból állnak.
+        </li>
+
+        <li>A fehér cellákba villanykörtéket lehet elhelyezni.</li>
+
+        <li>
+            A villanykörtékből a fény átlósan nem terjed, csak az adott sor és
+            oszlop mentén.
+        </li>
+
+        <li>
+            A fekete cellákon valamilyen tereptárgy van, ami akadályozza a fény
+            terjedését.
+        </li>
+
+        <li>
+            A fekete cellák opcionálisan egy egész számot is tartalmazhatnak 0-tól
+            4-ig. Ez azt jelzi, hogy hány szomszédos (alul, felül, jobbra, balra)
+            cella tartalmaz villanykörtét. Ha van ilyen szám, akkor be kell tartani!
+        </li>
+
+        <li>Két villanykörte soha nem világíthatja meg egymást!</li>
+
+        <li>
+            A játék célja a villanykörtéket úgy elhelyezni, hogy minden fehér cellát
+            megvilágítsanak.
+        </li>
+    </ul>
+
+    <div id="selector">
+        <label for="name">Játékos neve: </label>
+        <input type="text" id="name" autocomplete="off" />
+
+        <div id="game-tables">
+            <h1>Játszható pályák</h1>
+            <div id="options">
+                <div class="card" id="easy">
+                    Könnyű
+                    <span> 7x7 </span>
+                </div>
+
+                <div class="card" id="med">
+                    Haladó
+                    <span> 7x7 </span>
+                </div>
+
+                <div class="card" id="extreme">
+                    Extrém
+                    <span> 10x10 </span>
+                </div>
+            </div>
+        </div>
+
+        <div id="last-games">
+            <table cellspacing="0">
+                <caption>
+                    Előző játékok
+                </caption>
+                <thead>
+                    <th>Játékos</th>
+                    <th>Pálya</th>
+                    <th>Idő</th>
+                </thead>
+
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="paused">
+            <table>
+                <caption>
+                    Félbehagyott játékok
+                </caption>
+                <thead>
+                    <th>Játékos</th>
+                    <th>Idő</th>
+                </thead>
+
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="game">
+        <p id="player"></p>
+        <p id="timer"></p>
+        <table id="board" cellspacing="0"></table>
+    </div>
+</body>
+
+</html>
+<script src="boards.js"></script>
+<script src="script.js"></script>
